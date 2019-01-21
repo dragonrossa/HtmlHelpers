@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "OsnovniHelperi";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>
+        OsnovniHelperi
+    </title>
+
+    <style>
+        div{
+            padding-bottom:5px;
+        }
+    </style>
+</head>
+<body>
+<br /><br />
+
+    <div>
+        @Html.CheckBox("check",true) Checkbox
+    </div>
+
+    <div>
+        @Html.RadioButton("button", 1) RadioButton 1
+        @Html.RadioButton("button", 2) RadioButton 2
+
+    </div>
+   
+    <div>
+        @Html.Hidden("sakriven", "sakrili smo tekst")
+    </div>
+  
+    <div>
+
+        @Html.Password("pass", "abcd12345")
+
+    </div>
+
+
+    <div>
+        @Html.TextArea("tekst","ovo je isto neki tekstić")
+
+    </div>
+    
+
+    <div>
+
+        @Html.TextBox("box","ovo je neki boksić")
+
+    </div>
+
+    <div>
+
+        @Html.DropDownList("Dani u tjednu",new SelectList(new[] { "Ponedjeljak", "Utorak", "Srijeda", "Četvrtak", "Petak"}), "Izaberi dan u tjednu") 
+
+    </div>
+
+    <div>
+
+        @Html.ListBox("Brojevi dijeljivi sa tri", new MultiSelectList(new[] {"tri","šest","devet"}),"Izaberi broj")
+    </div>
+
+</body>
+
+
+
+</html>
