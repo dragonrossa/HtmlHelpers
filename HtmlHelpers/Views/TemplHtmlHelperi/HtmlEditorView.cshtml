@@ -1,0 +1,106 @@
+﻿@model HtmlHelpers.Models.OsobaTempl
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HtmlEditorView</title>
+
+    <style>
+        label {
+            display: inline-block;
+            width: 150px;
+            margin: 5px;
+            font-weight:bold;
+        }
+
+       
+    </style>
+
+</head>
+<body>
+    <div>
+
+        @using (Html.BeginForm())
+        {
+
+            //1.
+
+            <div>
+                <label>Id:</label>
+                @Html.Editor("OsobaId")
+            </div>
+
+
+
+            //2.
+            <div>
+                <label>Ime:</label>
+                @Html.Editor("Ime")
+            </div>
+
+
+            //3.
+            <div>
+                <label>Prezime:</label>
+                @Html.Editor("Prezime")
+            </div>
+
+            //4.
+            <div>
+                <label>Email:</label>
+                @Html.Editor("Email")
+            </div>
+
+            //5.
+            <div>
+                <label>Mjesto stanovanja:</label>
+                @Html.EditorFor(x=>x.MjestoStanovanja)
+            </div>
+
+            //6.
+            <div>
+                <label>Spol:</label>
+                @Html.EditorFor(x=>x.Spol)
+            </div>
+
+            //7.
+            <div>
+                <label>Zaposlen:</label>
+                @Html.EditorFor(x=>x.Zaposlen)
+            </div>
+
+            //8.
+            <div>
+                <label>Datum rodjenja:</label>
+                @Html.EditorFor(x=>x.DatumRodjenja)
+            </div>
+
+            //9.
+            <div>
+                <label>Napomena:</label>
+                @Html.EditorFor(x=>x.Napomena)
+            </div>
+
+            //10.
+            <div>
+                <label>Adresa osobe:</label>
+                @Html.EditorFor(x=>x.AdresaOsobe)
+            </div>
+
+            <input type="submit" value="Posalji" />
+
+
+
+        }
+
+
+
+
+    </div>
+</body>
+</html>
