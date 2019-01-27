@@ -1,0 +1,97 @@
+﻿@model  HtmlHelpers.Models.Osoba
+
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StrongTypedHelper</title>
+
+    <style>
+
+        label {
+            display: inline-block;
+            width: 150px;
+            margin: 5px;
+        }
+
+        .redColor {
+            color: red;
+        }
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+    <div>
+
+        @using (Html.BeginForm("StrongTypedHelper", "HtmlHelpers"))
+        {
+            <div>
+
+                <label>Ime:</label>
+                @Html.TextBoxFor(x => x.Ime)
+
+            </div>
+
+            <div>
+
+                <label>Prezime:</label>
+                @Html.TextBoxFor(x => x.Prezime)
+
+            </div>
+
+            <div>
+
+                <label>Email:</label>
+                @Html.TextBoxFor(x => x.Email)
+
+            </div>
+
+            <div>
+
+                <label>Mjesto stanovanja:</label>
+                @Html.DropDownListFor(x => x.MjestoStanovanja, new SelectList((string[])ViewBag.Mjesta), "Izaberi")
+
+            </div>
+
+            <div>
+
+                <label>Spol:</label>
+                @Html.RadioButtonFor(x => x.Spol, "M", true) Muško
+                @Html.RadioButtonFor(x => x.Spol, "Ž", true) Žensko
+
+            </div>
+
+            <div>
+
+                <label>Zaposlen:</label>
+                @Html.CheckBoxFor(x => x.Zaposlen, false)
+
+                <input type="submit" value="Pošalji" />
+
+
+            </div>
+
+
+        }
+
+    </div>
+
+
+    <p>
+        <label class="redColor">@ViewBag.Poruka</label>
+    </p>
+
+</body>
+</html>

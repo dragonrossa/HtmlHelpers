@@ -1,0 +1,104 @@
+﻿@model HtmlHelpers.Models.OsobaTempl
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HtmlLabelDisplay</title>
+
+    <style>
+        label {
+            display: inline-block;
+            width: 150px;
+            margin: 5px;
+            font-weight: bold;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div>
+
+        @*1*@
+
+        <div>
+            @Html.Label("OsobaId")
+            @Html.Display("OsobaId")
+        </div>
+
+        @*2*@
+
+        <div>
+            @Html.Label("Ime")
+            @Html.Display("Ime")
+        </div>
+
+        @*3*@
+
+        <div>
+            @Html.Label("Prezime")
+            @Html.Display("Prezime")
+        </div>
+
+
+        @*4*@
+
+
+        <div>
+            @Html.Label("Email")
+            @Html.Display("Email")
+        </div>
+
+
+        @*5*@
+
+        <div>
+            @Html.LabelFor(x => x.MjestoStanovanja)
+            @Html.DisplayFor(x => x.MjestoStanovanja)
+        </div>
+
+        @*6*@
+
+
+        <div>
+            @Html.LabelFor(x => x.Spol)
+            @Html.DisplayFor(x => x.Spol)
+        </div>
+
+
+
+        @*7*@
+
+
+        <div>
+            @Html.LabelFor(x => x.Zaposlen)
+            @Html.DisplayFor(x => x.Zaposlen)
+        </div>
+
+        @*8*@
+
+        <div>
+            @Html.LabelFor(x => x.DatumRodjenja)
+            @Html.DisplayFor(x => x.DatumRodjenja)
+        </div>
+
+        @*9*@
+
+        <div>
+            @Html.LabelFor(x => x.Napomena)
+            @Html.DisplayFor(x => x.Napomena)
+        </div>
+
+        @*10*@
+
+
+
+
+    </div>
+</body>
+</html>
